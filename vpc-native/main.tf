@@ -45,7 +45,7 @@ resource "google_container_cluster" "cluster" {
     network_policy_config {
       disabled = false
     }
-    http_load_balancing { disabled = true }
+    http_load_balancing { disabled = var.disable_http_load_balancing }
   }
 
   dynamic "workload_identity_config" {
