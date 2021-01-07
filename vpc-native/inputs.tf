@@ -84,3 +84,9 @@ variable "enable_workload_identity" {
   description = "A boolean to enable workload identity"
   default     = false
 }
+
+variable "disable_http_load_balancing" {
+  type        = bool
+  description = "Disable GKE default load balancing for support custom Ingress Controllers"
+  default     = false
+}
